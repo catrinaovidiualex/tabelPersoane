@@ -6,7 +6,11 @@ btnAdd.addEventListener("click", ()=>{
     addStudent();
 })
 
-let btnUpdate=document.querySelector(".update");
-btnAdd.addEventListener("click", ()=>{
+let btnUpdate=document.querySelector(".updateSt");
+
+
+
+btnUpdate.addEventListener("click", ()=>{
+
     updateStudentEmail();
 })

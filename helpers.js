@@ -54,21 +54,38 @@ let addStudent=()=>{
 
 let  updateStudentEmail=()=>{
 
-    let numeModificat=prompt("Introduceti numele studentului pentru care doriti sa modificati adresa de email:");
+    let numeCitit=prompt("Introduceti numele studentului pentru care doriti sa modificati adresa de email:");
+
+ 
+
     let emailModificat=prompt("Introduceti noua adresa de email:")
     for(let i=0;i<data.length;i++){
 
-        if(data[i].nume==numeModificat){
+       
+        if(data[i].nume==numeCitit){
 
             data[i].email=emailModificat;
             
            }
-           else{
-               console.log("Studentul nu exista in baza de date!");
-           }
+          
     }
 
 
+
+    setTable();
+
+}
+
+let deleteStudent=()=>{
+
+    let studentDeSters=prompt("Introduceti numele studentului pe care doriti sa il stergeti:");
+    for(let i=0;i<data.length;i++){
+        if(data[i].nume==studentDeSters){
+            data[i].pop();
+
+        }
+
+    }
     setTable();
 
 }
