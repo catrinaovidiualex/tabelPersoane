@@ -23,8 +23,6 @@ let setTable=()=>{
     }
 
 
-
-
 let addStudent=()=>{
 
    
@@ -78,14 +76,26 @@ let  updateStudentEmail=()=>{
 
 let deleteStudent=()=>{
 
+    let list=[];
     let studentDeSters=prompt("Introduceti numele studentului pe care doriti sa il stergeti:");
     for(let i=0;i<data.length;i++){
-        if(data[i].nume==studentDeSters){
-            data[i].pop();
+        if(data[i].nume!==studentDeSters){
+           
+            list.push(data[i]);
 
         }
 
     }
+
+
+    data=[...list];//spread operator
+
     setTable();
 
 }
+
+let readStudenti=()=>{
+    for(let i=0;i<data.length;i++)
+    if(data[i].nume!==""){
+    setTable();}
+    }
